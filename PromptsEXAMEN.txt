@@ -1,0 +1,29 @@
+Prompts:
+
+1.Mira como Ingeniero en Sistemas estoy trabajando en la maquina virtual de zeppelin y en el cual tras leer de esta forma el csv val dfClima = spark
+    .read
+    .option("header","true")
+    .option("sep",",")
+    .option("inferSchema",true)
+    .csv("/workspace/PROG-S10/weatherHistory.csv") y presentar el esquema dfClima.printSchema |-- Formatted Date: timestamp (nullable = true)
+ |-- Summary: string (nullable = true)
+ |-- Precip Type: string (nullable = true)
+ |-- Temperature (C): double (nullable = true)
+ |-- Apparent Temperature (C): double (nullable = true)
+ |-- Humidity: double (nullable = true)
+ |-- Wind Speed (km/h): double (nullable = true)
+ |-- Wind Bearing (degrees): double (nullable = true)
+ |-- Visibility (km): double (nullable = true)
+ |-- Loud Cover: double (nullable = true)
+ |-- Pressure (millibars): double (nullable = true)
+ |-- Daily Summary: string (nullable = true) tengo que hacer UN EDA BIEN ESTRUCTURADO ENTONCES DAME SU ESTRUCTURA  
+
+
+2. PARA LAS FORMAS DE ANALISIS VISUAL USAMOS LO SIGUIENTE : z.show(
+  dfClimaLimpioPrecip
+    .groupBy("Precip Type")
+    .count()
+    .orderBy(desc("count"))
+) SEGUN ESTO DAME  QUE VIZUALISASIONES PUEDO CONSEGUIR UNIENDO ALGUNAS COLUMNAS O TAMBIEN SOLO DE UNA  
+
+3. Y SI TENGO MUCHOS DATOS NO ES RECOMENDABLE HACERLO CON LOG?
